@@ -1,10 +1,109 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact | Andrii Photo Studio</title>
+    <meta name="description" content="Contact the photographer for availability and quotes." />
+    <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-$END$
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header>
+    <div class="container navbar" role="navigation" aria-label="Main">
+        <a class="brand" href="index.html" aria-label="Go to homepage">
+            <div class="brand-mark" aria-hidden="true"></div>
+            <span>Andrii Photo Studio</span>
+        </a>
+
+        <nav aria-label="Primary navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-actions mobile-nav">
+            <button id="menuBtn" class="btn menu-btn" type="button" aria-expanded="false" aria-controls="mobilePanel">
+                Menu
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="mobilePanel" class="mobile-panel" role="menu" aria-label="Mobile menu">
+            <a href="index.html">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" aria-current="page">Contact</a>
+        </div>
+    </div>
+</header>
+
+<main id="main">
+    <div class="container card section">
+        <h1>Contact</h1>
+        <p class="lead">Send a message to check availability. (Demo form: client-side processing only.)</p>
+
+        <form id="contactForm" class="form" novalidate aria-describedby="privacyNote">
+            <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required />
+                <div id="nameError" class="error" aria-live="polite"></div>
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+                <div id="emailError" class="error" aria-live="polite"></div>
+            </div>
+
+            <div class="full">
+                <label for="topic">Topic</label>
+                <select id="topic" name="topic">
+                    <option value="portrait">Portrait session</option>
+                    <option value="event">Event</option>
+                    <option value="product">Product photos</option>
+                </select>
+                <div class="help">This helps me reply faster.</div>
+            </div>
+
+            <div class="full">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+                <div id="messageError" class="error" aria-live="polite"></div>
+            </div>
+
+            <div class="full">
+                <button class="btn primary" type="submit">Submit</button>
+                <div id="formNotice" class="notice" hidden aria-live="polite"></div>
+                <p id="privacyNote" class="help">
+                    Privacy: I only use this info to respond. I do not sell your data.
+                </p>
+            </div>
+        </form>
+    </div>
+</main>
+
+<footer>
+    <div class="container footer-grid">
+        <div>
+            <strong>Andrii Photo Studio</strong><br />
+            <span>© <span id="year"></span></span>
+        </div>
+        <ul class="social" aria-label="Social links">
+            <li><a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.youtube.com" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+        </ul>
+    </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>

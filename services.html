@@ -1,10 +1,118 @@
-<!DOCTYPE html>
+<<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Services & Pricing | Andrii Photo Studio</title>
+    <meta name="description" content="Photography services and simple pricing packages." />
+    <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-$END$
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header>
+    <div class="container navbar" role="navigation" aria-label="Main">
+        <a class="brand" href="index.html" aria-label="Go to homepage">
+            <div class="brand-mark" aria-hidden="true"></div>
+            <span>Andrii Photo Studio</span>
+        </a>
+
+        <nav aria-label="Primary navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="services.html" aria-current="page">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-actions mobile-nav">
+            <button id="menuBtn" class="btn menu-btn" type="button" aria-expanded="false" aria-controls="mobilePanel">
+                Menu
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="mobilePanel" class="mobile-panel" role="menu" aria-label="Mobile menu">
+            <a href="index.html">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="services.html" aria-current="page">Services</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</header>
+
+<main id="main">
+    <div class="container card section">
+        <h1>Services & pricing</h1>
+        <p class="lead">Simple packages. Final price depends on location and project details.</p>
+
+        <h2>What you get (list)</h2>
+        <ul>
+            <li>Professional editing and color correction</li>
+            <li>Online gallery delivery</li>
+            <li>Clear communication and timeline</li>
+        </ul>
+
+        <h2>Packages (table)</h2>
+        <div class="table-wrap" role="region" aria-label="Pricing table" tabindex="0">
+            <table>
+                <caption>Photography packages overview</caption>
+                <thead>
+                <tr>
+                    <th scope="col">Package</th>
+                    <th scope="col">Best for</th>
+                    <th scope="col">Includes</th>
+                    <th scope="col">Starting price</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">Portrait Mini</th>
+                    <td>Headshots, quick portraits</td>
+                    <td>20 minutes, 10 edited photos</td>
+                    <td>$120</td>
+                </tr>
+                <tr>
+                    <th scope="row">Event Basic</th>
+                    <td>Small events</td>
+                    <td>2 hours coverage, 60+ edited photos</td>
+                    <td>$350</td>
+                </tr>
+                <tr>
+                    <th scope="row">Product Starter</th>
+                    <td>Ecommerce listings</td>
+                    <td>10 products, 2 angles each</td>
+                    <td>$200</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="hero-cta" style="margin-top:14px;">
+            <a class="btn primary" href="contact.html">Get a quote (CTA)</a>
+            <a class="btn" href="portfolio.html">See examples</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container footer-grid">
+        <div>
+            <strong>Andrii Photo Studio</strong><br />
+            <span>© <span id="year"></span></span>
+        </div>
+        <ul class="social" aria-label="Social links">
+            <li><a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.youtube.com" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>

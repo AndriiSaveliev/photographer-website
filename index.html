@@ -1,10 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Andrii Photo Studio | Portraits, Events, Products</title>
+    <meta name="description" content="Photography portfolio: portraits, events, and product photos. Book a session and view packages." />
+    <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-$END$
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header>
+    <div class="container navbar" role="navigation" aria-label="Main">
+        <a class="brand" href="index.html" aria-label="Go to homepage">
+            <div class="brand-mark" aria-hidden="true"></div>
+            <span>Andrii Photo Studio</span>
+        </a>
+
+        <nav aria-label="Primary navigation">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-actions mobile-nav">
+            <button id="menuBtn" class="btn menu-btn" type="button" aria-expanded="false" aria-controls="mobilePanel">
+                Menu
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="mobilePanel" class="mobile-panel" role="menu" aria-label="Mobile menu">
+            <a href="index.html" aria-current="page">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</header>
+
+<main id="main">
+    <div class="container hero">
+        <section class="card hero-copy" aria-labelledby="home-title">
+            <h1 id="home-title">Photography that looks clean, real, and professional.</h1>
+            <p class="lead">
+                I shoot portraits, small events, and product photos for local brands. Fast delivery, simple pricing, friendly process.
+            </p>
+
+            <div class="hero-cta">
+                <a class="btn primary" href="contact.html">Book a session (CTA)</a>
+                <a class="btn" href="portfolio.html">See portfolio</a>
+            </div>
+
+            <p class="help">
+                External resources:
+                <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener">WCAG</a>,
+                <a href="https://validator.w3.org/" target="_blank" rel="noopener">HTML Validator</a>,
+                <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>
+            </p>
+        </section>
+
+        <aside class="card hero-media" aria-label="Featured photo">
+            <img src="assets/img/hero-photographer.jpg" alt="Photographer holding a camera outdoors during golden hour." />
+        </aside>
+    </div>
+
+    <div class="container grid" aria-label="Highlights">
+        <section class="card tile">
+            <h2>Portraits</h2>
+            <p>Simple lighting, natural skin tones, quick posing help. Great for LinkedIn and family photos.</p>
+        </section>
+        <section class="card tile">
+            <h2>Events</h2>
+            <p>Birthdays, small weddings, parties. I focus on emotions and clean composition.</p>
+        </section>
+        <section class="card tile">
+            <h2>Product Photos</h2>
+            <p>White background or lifestyle. Perfect for Etsy, Amazon, and TikTok Shop listings.</p>
+        </section>
+    </div>
+
+    <section class="container card section" aria-labelledby="home-accessibility">
+        <h2 id="home-accessibility">Accessibility & ethics (short note)</h2>
+        <ul>
+            <li>Readable text size (16px+), clear headings, keyboard-friendly navigation.</li>
+            <li>Alt text for images and good contrast for readability.</li>
+            <li>Only collect necessary info on the contact form (name/email/message).</li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <div class="container footer-grid">
+        <div>
+            <strong>Andrii Photo Studio</strong><br />
+            <span>© <span id="year"></span> • Indianapolis, IN</span>
+        </div>
+        <ul class="social" aria-label="Social links">
+            <li><a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.youtube.com" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>
