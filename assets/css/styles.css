@@ -1,13 +1,13 @@
 /* Simple, accessible, responsive base */
 :root{
-    --bg: #0b0f19;
-    --surface: #121a2a;
-    --text: #e9eefc;
-    --muted: #b8c2e0;
-    --accent: #7cc7ff;
-    --accent-2: #a7ffb5;
-    --danger: #ff6b6b;
-    --shadow: 0 10px 30px rgba(0,0,0,.35);
+    --bg: #f5efe6;
+    --surface: #ffffff;
+    --text: #3a2f27;
+    --muted: #7a6a5f;
+    --accent: #b08968;
+    --accent-2: #ddb892;
+    --danger: #c44536;
+    --shadow: 0 10px 30px rgba(0,0,0,.08);
     --radius: 14px;
     --max: 1100px;
 }
@@ -17,13 +17,18 @@ html{ scroll-behavior:smooth; }
 body{
     margin:0;
     font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    background:var(--bg);
+    background:
+            linear-gradient(rgba(245,239,230,0.75), rgba(245,239,230,0.75)),
+            url("../img/wedingphoto.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color:var(--text);
     line-height:1.6;
     font-size:16px;
 }
 a{ color:var(--accent); }
-a:focus, button:focus, input:focus, textarea:focus{
+a:focus, button:focus{
     outline: 3px solid var(--accent-2);
     outline-offset: 2px;
 }
@@ -41,7 +46,8 @@ a:focus, button:focus, input:focus, textarea:focus{
 
 header{
     position:sticky; top:0; z-index:20;
-    background:rgba(11,15,25,.86);
+    background: var(--surface);
+    box-shadow: 0 4px 20px rgba(0,0,0,.06);
     backdrop-filter: blur(10px);
     border-bottom:1px solid rgba(255,255,255,.08);
 }
@@ -53,9 +59,14 @@ header{
     display:flex; align-items:center; gap:10px;
     text-decoration:none;
 }
-.brand-mark{
-    width:36px; height:36px; border-radius:10px;
-    background:linear-gradient(135deg, var(--accent), var(--accent-2));
+.brand-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 12px;
+    border: 2px solid white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 .brand span{ font-weight:700; letter-spacing:.2px; color:var(--text); }
 
@@ -105,9 +116,20 @@ main{ padding:22px 0 44px; }
     border-radius:var(--radius);
     box-shadow:var(--shadow);
 }
-.hero-copy{ padding:22px; }
-.hero h1{ font-size:32px; line-height:1.2; margin:0 0 10px; }
-.lead{ color:var(--muted); font-size:18px; margin:0 0 14px; }
+.hero-copy{
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(6px);
+    border-radius: 18px;
+}
+.hero h1{
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+.lead{
+    font-size: 19px;
+    margin-bottom: 25px;
+}
 .hero-cta{ display:flex; gap:10px; flex-wrap:wrap; margin-top:12px; }
 
 .hero-media{
@@ -151,8 +173,8 @@ main{ padding:22px 0 44px; }
 .figure img{
     width:100%;
     height:230px;
-    object-fit:cover;
-    display:block;
+    object-fit:contain;
+    background:#eee;
 }
 .figure figcaption{
     padding:10px 12px;
@@ -244,4 +266,62 @@ footer{
     }
     .mobile-panel a:hover{ background:rgba(255,255,255,.06); }
     .form{ grid-template-columns: 1fr; }
+}
+
+/* FORCE HERO CARD SIZE */
+.hero {
+    min-height: 620px !important;
+    padding: 60px 0 !important;
+}
+
+.hero-copy{
+    padding: 50px 45px !important;
+    max-width: 560px !important;
+}
+
+.hero h1{
+    font-size: 42px !important;
+    line-height: 1.2 !important;
+    margin: 0 0 18px !important;
+}
+
+.lead{
+    font-size: 19px !important;
+    margin: 0 0 24px !important;
+}
+/* Premium form look */
+.form{
+    gap: 18px;
+}
+
+label{
+    font-weight: 650;
+    letter-spacing: .2px;
+    color: var(--text);
+}
+
+/* All fields: nice visible border */
+input, textarea, select{
+    background: rgba(255,255,255,0.92);
+    border: 1.5px solid rgba(176,137,104,0.45); /* warm accent border */
+    box-shadow: 0 8px 18px rgba(0,0,0,0.05);
+    transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+
+/* On focus: premium glow */
+input:focus, textarea:focus, select:focus{
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(176,137,104,0.18), 0 12px 24px rgba(0,0,0,0.06);
+    transform: translateY(-1px);
+}
+
+/* Placeholder subtle */
+::placeholder{
+    color: rgba(58,47,39,0.45);
+}
+
+/* Textarea a bit taller */
+textarea{
+    min-height: 160px;
 }
