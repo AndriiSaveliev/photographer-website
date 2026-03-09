@@ -21,35 +21,49 @@
 <a class="skip-link" href="#main">Skip to main content</a>
 
 <header>
-    <div class="container navbar" role="navigation" aria-label="Main">
-        <a class="brand" href="index.html" aria-label="Go to homepage">
-            <img src="assets/img/photoAndrii.jpg" alt="Andrii Photo Studio" class="brand-photo">
-            <div class="brand-text">
-                <div class="brand-name">Andrii Saveliev</div>
-                <div class="brand-role">Photographer</div>
-            </div>
-        </a>
-
-        <nav aria-label="Primary navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-
-        <div class="nav-actions mobile-nav">
-            <button id="menuBtn" class="btn menu-btn" type="button" aria-expanded="false" aria-controls="mobilePanel">
-                Menu
-            </button>
+<div class="container navbar" role="navigation" aria-label="Main">
+    <a class="brand" href="index.html" aria-label="Go to homepage">
+        <img src="assets/img/photoAndrii.jpg" alt="Andrii Photo Studio" class="brand-photo">
+        <div class="brand-text">
+            <div class="brand-name">Andrii Saveliev</div>
+            <div class="brand-role">Photographer</div>
         </div>
-    </div>
+    </a>
 
+    <nav class="desktop-nav" aria-label="Primary navigation">
+        <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
+    <div class="nav-actions mobile-nav">
+        <button
+                id="menuBtn"
+                class="btn menu-btn"
+                type="button"
+                aria-expanded="false"
+                aria-controls="mobilePanel"
+        >
+            Menu
+        </button>
     </div>
+</div>
+
+<nav id="mobilePanel" class="mobile-panel" aria-label="Mobile navigation">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
 </header>
+
 
 <main id="main">
     <div class="container card section">

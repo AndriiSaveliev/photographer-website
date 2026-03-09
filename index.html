@@ -33,7 +33,7 @@
             </div>
         </a>
 
-        <nav aria-label="Primary navigation">
+        <nav class="desktop-nav" aria-label="Primary navigation">
             <ul>
                 <li><a href="index.html" aria-current="page">Home</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
@@ -44,13 +44,27 @@
         </nav>
 
         <div class="nav-actions mobile-nav">
-            <button id="menuBtn" class="btn menu-btn" type="button" aria-expanded="false" aria-controls="mobilePanel">
+            <button
+                    id="menuBtn"
+                    class="btn menu-btn"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="mobilePanel"
+            >
                 Menu
             </button>
         </div>
     </div>
 
-
+    <nav id="mobilePanel" class="mobile-panel" aria-label="Mobile navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 </header>
 
 <main id="main">

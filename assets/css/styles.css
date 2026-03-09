@@ -100,9 +100,13 @@ nav a[aria-current="page"]{ background:rgba(124,199,255,.14); }
 .btn:hover{ filter:brightness(1.08); }
 .menu-btn{ min-width:46px; min-height:46px; }
 
-.mobile-nav{ display:none; }
+.mobile-nav{
+    display:none;
+}
 
-main{ padding:22px 0 44px; }
+main{
+    padding:22px 0 44px;
+}
 
 .hero{
     display:grid;
@@ -242,21 +246,38 @@ footer{
 }
 .social a{ padding:8px 10px; border-radius:10px; background:rgba(255,255,255,.06); text-decoration:none; color:var(--text); }
 
-/* Responsive */
 @media (max-width: 900px){
     .hero{ grid-template-columns: 1fr; }
     .grid{ grid-template-columns: 1fr; }
     .gallery{ grid-template-columns: 1fr; }
-    nav ul{ display:none; }
-    .mobile-nav{ display:block; }
+
+    .desktop-nav ul{
+        display:none;
+    }
+
+    .mobile-nav{
+        display:block;
+    }
+
     .mobile-panel{
         display:none;
         margin-top:10px;
-        padding:10px;
+        padding:10px 18px 16px;
         border-radius:14px;
         background:var(--surface);
         border:1px solid rgba(255,255,255,.08);
+        box-shadow: var(--shadow);
     }
+
+    .mobile-panel ul{
+        display:flex;
+        flex-direction:column;
+        list-style:none;
+        margin:0;
+        padding:0;
+        gap:8px;
+    }
+
     .mobile-panel a{
         display:block;
         padding:12px;
@@ -264,8 +285,17 @@ footer{
         text-decoration:none;
         color:var(--text);
     }
-    .mobile-panel a:hover{ background:rgba(255,255,255,.06); }
-    .form{ grid-template-columns: 1fr; }
+
+    .mobile-panel a:hover{
+        background:rgba(255,255,255,.06);
+    }
+
+    .form{
+        grid-template-columns: 1fr;
+    }
+    .mobile-panel.open{
+        display:block !important;
+    }
 }
 
 /* FORCE HERO CARD SIZE */

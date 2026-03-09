@@ -3,9 +3,12 @@
 function toggleMenu() {
     const panel = document.getElementById("mobilePanel");
     const btn = document.getElementById("menuBtn");
-    const isOpen = panel.style.display === "block";
-    panel.style.display = isOpen ? "none" : "block";
-    btn.setAttribute("aria-expanded", String(!isOpen));
+
+    if (!panel || !btn) return;
+
+    panel.classList.toggle("open");
+    const isOpen = panel.classList.contains("open");
+    btn.setAttribute("aria-expanded", String(isOpen));
 }
 
 function setCurrentYear() {
