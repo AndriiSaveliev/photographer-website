@@ -100,7 +100,15 @@ nav a[aria-current="page"]{ background:rgba(124,199,255,.14); }
 .btn:hover{ filter:brightness(1.08); }
 .menu-btn{ min-width:46px; min-height:46px; }
 
+.desktop-nav{
+    display:block;
+}
+
 .mobile-nav{
+    display:none;
+}
+
+.mobile-panel{
     display:none;
 }
 
@@ -251,7 +259,7 @@ footer{
     .grid{ grid-template-columns: 1fr; }
     .gallery{ grid-template-columns: 1fr; }
 
-    .desktop-nav ul{
+    .desktop-nav {
         display:none;
     }
 
